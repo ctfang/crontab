@@ -17,7 +17,7 @@ if( !$config['key'] ){
 		echo '<h1>只允许本机请求</h1>';
 		exit;
 	}
-}elseif( $_GET['s']!=$config['key'] ){
+}elseif( $_GET['key']!=$config['key'] ){
 	echo '<h1>权限码不对</h1>';
 	exit;
 }
