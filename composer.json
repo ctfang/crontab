@@ -1,0 +1,21 @@
+{
+  "name": "selden1992/crontab",
+  "description": "用于使用原生php实现crontab定时任务功能",
+  "authors": [
+    {
+      "name": "cyz",
+      "email": "2206582181@qq.com"
+    }
+  ],
+  "license": "Apache-2.0",
+  "require": {
+    "php": ">=5.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Console\\": "src/",
+      "Console\\Database\\": "../../../database/"
+    },
+    "files": ["main.php"]
+  }
+}
