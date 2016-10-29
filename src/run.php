@@ -11,7 +11,8 @@ namespace crontab\src;
 
 class run
 {
-    static protected $_config; // 配置单例
+    static protected $_pid;     // 当前进程随机标识单例
+    static protected $_config;  // 配置单例
     /**
      * 启动函数
      */
