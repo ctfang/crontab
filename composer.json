@@ -13,7 +13,7 @@
   },
   "autoload": {
     "psr-4": {
-      "crontab\\src": "src/"
+      "crontab\\src\\": "src/"
     },
     "files": ["main.php"]
   }
