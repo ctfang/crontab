@@ -5,5 +5,6 @@
  * Date: 2016/10/29
  * Time: 19:54
  */
-
-\crontab\src\run::begin();
+include 'src/run.php';
+include 'src/Http.php';
+new \crontab\src\run();
