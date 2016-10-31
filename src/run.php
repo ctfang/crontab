@@ -70,7 +70,7 @@ class run
         // 设置默认值
         if( !isset(self::$_config) ){
             if( is_file( './config/cron_config.php' ) ){
-                run::set( './config/cron_config.php' );
+                run::set( include './config/cron_config.php' );
             }else{
                 file_put_contents('./config/cron_config.php',file_get_contents(dirname(__DIR__).'/cron_config.php'));
             }
