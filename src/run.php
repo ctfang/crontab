@@ -55,9 +55,9 @@ class run
     static public function set( $_config )
     {
         if( !is_array($_config) ){
-            die(___FILE__.'传入参数必须为数组');
+            die('传入参数必须为数组');
         }elseif( !$_config['interval'] || !$_config['run_file'] || !$_config['can_run'] ){
-            die(___FILE__.'空值');
+            die('空值');
         }
         self::$_config = $_config;
     }
@@ -70,8 +70,9 @@ class run
         // 设置默认值
         if( !isset(self::$_config) ){
             if( is_file( './config/cron_config.php' ) ){
-                run::set( './config/cron_config.php' );
+                run::set( include './config/cron_config.php' );
             }else{
+                if( !is_dir('./config/') ) mkdir('./config/',0755,true);
                 file_put_contents('./config/cron_config.php',file_get_contents(dirname(__DIR__).'/cron_config.php'));
             }
         }
